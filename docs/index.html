@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U.S. Air Network Resilience: interactive charts</title>
+<style>
+  :root { --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b1220; --card:#111a2e; --text:#e5e7eb; --muted:#94a3b8; --line:#22304a; --accent:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 0 0 8px; letter-spacing: -0.01em; }
+  p.lead { color: var(--muted); margin: 0 0 32px; max-width: 70ch; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  a.card { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+           text-decoration:none; color:inherit; transition: transform .15s ease, border-color .15s ease; }
+  a.card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  a.card img { width:100%; height:190px; object-fit:cover; object-position:top; display:block; background:#fff; border-bottom:1px solid var(--line); }
+  .body { padding: 14px 16px 16px; }
+  .body h2 { font-size: 1rem; margin: 0 0 4px; }
+  .body span { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Resilience of the U.S. Passenger Air Network (2025)</h1>
+  <p class="lead">Interactive versions of every figure in the analysis. Hover for details, zoom, and play the collapse animation.</p>
+  <div class="grid">
+    <a class="card" href="01_degree_distribution.html"><img src="img/01_degree_distribution.png" alt=""><div class="body"><h2>1. Distribution of connections</h2><span>A handful of airports concentrate hundreds of routes.</span></div></a>
+    <a class="card" href="02_top15_airports_passengers.html"><img src="img/02_top15_airports_passengers.png" alt=""><div class="body"><h2>2. Top 15 airports by passengers</h2><span>Atlanta, Denver and Dallas lead the network.</span></div></a>
+    <a class="card" href="03_network_map.html"><img src="img/03_network_map.png" alt=""><div class="body"><h2>3. The network on a map</h2><span>Airports sized by passengers handled.</span></div></a>
+    <a class="card" href="04_degree_vs_betweenness.html"><img src="img/04_degree_vs_betweenness.png" alt=""><div class="body"><h2>4. Degree vs. betweenness</h2><span>The hidden bridges of Alaska.</span></div></a>
+    <a class="card" href="05_backbone_routes_map.html"><img src="img/05_backbone_routes_map.png" alt=""><div class="body"><h2>5. Backbone routes</h2><span>The 220 busiest routes and the hubs' bridge role.</span></div></a>
+    <a class="card" href="06_failure_simulation.html"><img src="img/06_failure_simulation.png" alt=""><div class="body"><h2>6. Failure simulation</h2><span>Targeted, degree-based and random removal.</span></div></a>
+    <a class="card" href="07_collapse_animation.html"><img src="img/07_collapse_animation.png" alt=""><div class="body"><h2>7. Collapse animation</h2><span>Watch the network fragment as bridges are removed.</span></div></a>
+  </div>
+  <footer>Part of the us-airline-network-resilience project. Data: BTS T-100 (public domain) and OpenFlights (ODbL).</footer>
+</main>
+</body>
+</html>
