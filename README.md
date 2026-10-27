@@ -82,12 +82,12 @@ The 220 busiest routes, with hubs sized by passengers and colored by bridge role
 
 ## Interactive charts
 
-Every figure is also available as a standalone interactive page in [`docs/`](docs/index.html) (hover, zoom, play the animation). If you enable GitHub Pages for this repo (Settings, Pages, deploy from `main` and `/docs`), they will be served at `https://<your-username>.github.io/us-airline-network-resilience/`.
+Every figure is also available as a standalone interactive page in [`docs/`](docs/index.html) (hover, zoom, play the animation). If you enable GitHub Pages for this repo (Settings, Pages, deploy from `main` and `/docs`), they will be served at `https://jmartinezvogel.github.io/us-airline-network-resilience/`.
 
 ## Reproduce it
 
 ```bash
-git clone https://github.com/<your-username>/us-airline-network-resilience.git
+git clone https://github.com/jmartinezvogel/us-airline-network-resilience.git
 cd us-airline-network-resilience
 
 python -m venv .venv
